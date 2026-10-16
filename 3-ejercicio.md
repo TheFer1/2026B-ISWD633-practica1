@@ -2,22 +2,23 @@
 ![Imagen](esquema-ejercicio3.PNG)
 
 ### Crear red net-wp
-# COMPLETAR CON EL COMANDO COMANDO
+C:\Users\P3E010-D>docker network create net-wp
 
 ### Para que persista la información es necesario conocer en dónde mysql almacena la información.
 # COMPLETAR LA SIGUIENTE ORACIÓN. REVISAR LA DOCUMENTACIÓN DE LA IMAGEN EN https://hub.docker.com/
-En el esquema del ejercicio carpeta del contenedor (a) es (COMPLETAR CON LA RUTA)
+En el esquema del ejercicio carpeta del contenedor (a) es /var/lib/mysql
 
-Ruta carpeta host: .../ejercicio3/db
+Ruta carpeta host: C:\Users\P3E010-D\Downloads\dockerf\contenedor-a\ejercicio3\db
 
 ### ¿Qué contiene la carpeta db del host?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+
+Al iniciar la practica no contiene nada pero una ves creado el contenedor con el directorio de host se crean archivos y directorios para guardar la base de datos 
 
 ### Crear un contenedor con la imagen mysql:8  en la red net-wp, configurar las variables de entorno: MYSQL_ROOT_PASSWORD, MYSQL_DATABASE, MYSQL_USER y MYSQL_PASSWORD
-# COMPLETAR CON EL COMANDO
+ run -d --name mysql -v C:\Users\P3E010-D\Downloads\dockerf\contenedor-a\ejercicio3\db:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1234 -e MYSQL_DATABASE=ejercicio3 -e MYSQL_USER=fernando -e MYSQL_PASSWORD=fer123 --network net-wp  mysql:8
 
 ### ¿Qué observa en la carpeta db que se encontraba inicialmente vacía?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+se observan archivos y directorios que ya contienen información para poder ayudar a guardar los datos de la base de datos. 
 
 ### Para que persista la información es necesario conocer en dónde wordpress almacena la información.
 # COMPLETAR LA SIGUIENTE ORACIÓN. REVISAR LA DOCUMENTACIÓN DE LA IMAGEN EN https://hub.docker.com/
