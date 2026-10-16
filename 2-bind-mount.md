@@ -17,21 +17,25 @@ docker run -d --name <nombre contenedor> --mount type=bind,source=<ruta carpeta 
 ### Crear un contenedor con la imagen nginx:alpine, mapear todos por puertos, para la ruta carpeta host colocar el directorio en donde se encuentra la carpeta html en tu computador y para la ruta carpeta contenedor: /usr/share/nginx/html (esta ruta se obtiene al revisar la documentación de la imagen)
 ![Volúmenes](volumen-host.PNG)
 # COMPLETAR CON EL COMANDO
+docker run -d --name srvngix -v C:\Users\P3E010-D\Downloads\dockerf\nginx\html:/usr/share/nginx/html  -p 8080:80 nginx:alpine
 
 ### ¿Qué sucede al ingresar al servidor de nginx?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
-
+Al ingresar al servidor me aparece un error 403 devido a que no encuentra ningún archivo .html que pueda leer
 ### ¿Qué pasa con el archivo index.html del contenedor?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
-
+al utilizar el comando -v para montar una carpeta local vacía sobre esa ruta, el contenido original queda oculto mientras el montaje está activo. Por esta razón, Nginx no encuentra un archivo index.html que mostrar y devuelve el error 403 Forbidden.
 ### Ir a https://html5up.net/ y descargar un template gratuito, descomprirlo dentro de tu computador en la carpeta html
 ### ¿Qué sucede al ingresar al servidor de nginx?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+Ya se elimino el erro y muestra la plantilla que se descargo 
 
 ### Eliminar el contenedor
 # COMPLETAR CON EL COMANDO
+ rm -f srvngix
 
 ### ¿Qué sucede al crear nuevamente un contenedor montado al directorio definidos anteriormente?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+al crear nuevamente el contenedor con el directorio anterior se crea en base a la ruta del directorio es decir que me muestra ya la plantilla que estaba guardada ahi 
 
 
