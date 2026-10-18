@@ -1,3 +1,4 @@
 # COMPLETAR  
 Comparando sus conocimientos antes de hacer la práctica con sus conocimientos después de hacer la tarea, explicar los principales aprendizajes logrados para beneficio de su formación profesional.  
+Después de terminar la práctica, aprendí a manejar los distintos tipos de volúmenes en Docker y a comprender cómo funcionan. Esto permite mantener los datos almacenados aunque se elimine un contenedor, siempre que estén guardados en un volumen que no se elimine. También aprendí a administrar contenedores dentro de una misma red, permitiendo que se comuniquen mediante sus nombres sin necesidad de utilizar directamente sus direcciones IP. Estos conocimientos me ayudan a gestionar aplicaciones y datos de manera más organizada y segura
 Si solucionó un problema presentado o utilizó otros comandos que no se mencionan al realizar la práctica también se debe documentar.
